@@ -236,4 +236,11 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
-          files: */*.zip
+          files: |
+            x86_64-linux-gnu-mklittlefs/x86_64-linux-gnu-mklittlefs-*.zip
+            aarch64-linux-gnu-mklittlefs/aarch64-linux-gnu-mklittlefs-*.zip
+            arm-linux-gnueabihf-mklittlefs/arm-linux-gnueabihf-mklittlefs-*.zip
+            aarch64-apple-darwin-mklittlefs/aarch64-apple-darwin-mklittlefs-*.zip
+            x86_64-apple-darwin-mklittlefs/x86_64-apple-darwin-mklittlefs-*.zip
+            x86_64-w64-mingw32-mklittlefs/x86_64-w64-mingw32-mklittlefs-*.zip
+            i686-w64-mingw32-mklittlefs/i686-w64-mingw32-mklittlefs-*.zip
