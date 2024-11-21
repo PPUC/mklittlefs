@@ -33,7 +33,7 @@ jobs:
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
-        zip -rq ../x86_64-linux-gnu-${name}.zip mklittlefs
+        zip -rq ../x86_64-linux-gnu-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
         make clean
@@ -54,7 +54,7 @@ jobs:
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
-        zip -rq ../aarch64-linux-gnu-${name}.zip mklittlefs
+        zip -rq ../aarch64-linux-gnu-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
         make clean
@@ -75,7 +75,7 @@ jobs:
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
-        zip -rq ../arm-linux-gnueabihf-${name}.zip mklittlefs
+        zip -rq ../arm-linux-gnueabihf-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
         make clean
@@ -127,7 +127,7 @@ jobs:
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
-        zip -rq ../aarch64-apple-darwin-${name}.zip mklittlefs
+        zip -rq ../aarch64-apple-darwin-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
     - name: Upload mklittlefs MacARM
@@ -167,7 +167,7 @@ jobs:
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
-        zip -rq ../x86_64-apple-darwin-${name}.zip mklittlefs
+        zip -rq ../x86_64-apple-darwin-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
     - name: Upload mklittlefs Mac86
@@ -216,7 +216,7 @@ jobs:
         echo '            }') > tmp/mklittlefs/package.json
         cp /mingw*/bin/libwinpthread*.dll tmp/mklittlefs/.
         cd tmp
-        zip -rq ../${{matrix.env}}-w64-mingw32-${name}.zip mklittlefs
+        zip -rq ../${{matrix.env}}-w64-mingw32-${name}.zip mklittlefs/*
         cd ..
         rm -rf tmp
     - name: Upload mklittlefs ${{matrix.env}}
