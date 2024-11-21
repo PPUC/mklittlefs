@@ -29,7 +29,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
@@ -50,7 +50,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
@@ -71,7 +71,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
@@ -123,7 +123,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
@@ -163,7 +163,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cd tmp
@@ -211,7 +211,7 @@ jobs:
         echo '              "description": "Utility for creating LittleFS images for ESP32x SOCs",' &&
         echo '              "keywords": ["tools","build tools","filesystem"],' &&
         echo '              "license": "MIT",' &&
-        echo '              "system": '$AHOST',' &&
+        echo '              "system": "'$AHOST'",' &&
         echo '              "repository": {"type": "git","url": "https://github.com/ppuc/mklittlefs"}' &&
         echo '            }') > tmp/mklittlefs/package.json
         cp /mingw*/bin/libwinpthread*.dll tmp/mklittlefs/.
