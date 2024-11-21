@@ -110,10 +110,10 @@ jobs:
       run: |
         rm -f *.json *.gz *.zip
         pfx=aarch64-apple-darwin20
-        AHOST=aarch64-apple-darwin
-        TARGET_OS=osx CC=gcc CXX=g++ STRIP=strip make clean mklittlefs BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
+        AHOST=aarch64-apple-darwin TARGET_OS=osx CC=gcc CXX=g++ STRIP=strip make clean mklittlefs BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
     - name: Package mklittlefs MacARM
       run: |
+        AHOST=aarch64-apple-darwin
         name=mklittlefs-$(git rev-parse --short HEAD)
         mkdir -p tmp/mklittlefs
         mv mklittlefs tmp/mklittlefs/.
@@ -150,10 +150,10 @@ jobs:
       run: |
         rm -f *.json *.gz *.zip
         pfx=x86_64-apple-darwin20
-        AHOST=x86_64-apple-darwin
-        TARGET_OS=osx CC=gcc CXX=g++ STRIP=strip make clean mklittlefs BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
+        AHOST=x86_64-apple-darwin TARGET_OS=osx CC=gcc CXX=g++ STRIP=strip make clean mklittlefs BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
     - name: Package mklittlefs Mac86
       run: |
+        AHOST=x86_64-apple-darwin
         name=mklittlefs-$(git rev-parse --short HEAD)
         mkdir -p tmp/mklittlefs
         mv mklittlefs tmp/mklittlefs/.
@@ -198,10 +198,10 @@ jobs:
       run: |
         rm -f *.json *.gz *.zip
         pfx=${{matrix.env}}-w64-mingw32
-        AHOST=${{matrix.env}}-mingw32
-        TARGET_OS=windows CC=${pfx}-gcc CXX=${pfx}-g++ STRIP=strip mingw32-make clean mklittlefs.exe BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
+        AHOST=${{matrix.env}}-mingw32 TARGET_OS=windows CC=${pfx}-gcc CXX=${pfx}-g++ STRIP=strip mingw32-make clean mklittlefs.exe BUILD_CONFIG_NAME="-arduino" CPPFLAGS=""
     - name: Package mklittlefs ${{matrix.env}}
       run: |
+        AHOST=${{matrix.env}}-mingw32
         name=mklittlefs-$(git rev-parse --short HEAD)
         mkdir -p tmp/mklittlefs
         mv mklittlefs.exe tmp/mklittlefs/.
